@@ -1105,7 +1105,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 #gallery .owl-item {
   border-left: 2px solid #fff;
   border-right: 2px solid #fff;
+  overflow-x:hidden;
 }
+
+#gallery .owl-item img{
+  height:300px;
+  width:auto;
+}
+
 
 #gallery .owl-dot {
   display: inline-block;
