@@ -217,8 +217,9 @@ or at least read this note: http://i.imgur.com/7C0ws9e.gif
     padding: 20px 4%;
 }
 .vbox-container img{
-    max-width: 100%;
-    height: auto;
+    width:auto;
+    max-height: 70%;
+    max-width:70%;
 }
 .vbox-figlio{
     box-shadow: 0 0 12px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
