@@ -167,6 +167,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width:450px) {
+  #header .fund-logos {
+    display:none;
+    width:0px;
+  }
+
+  #header .fund-logos img {
+    display:none;
+    width:0px;
+  }
+}
+
 #header.header-scrolled, #header.header-fixed {
   background: rgba(6, 12, 34, 0.98);
   height: 70px;
@@ -185,6 +197,18 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+#header .fund-logos{
+  display:inline-block;
+  margin-left: 30px;
+  width:150px;
+}
+
+#header.header-scrolled .fund-logos{
+  display:inline;
+  max-width:250px;
+  transition: all 0.5s;
 }
 
 #header #logo h1 span {
