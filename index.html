@@ -1050,7 +1050,30 @@
               <div class="error-message"></div>
               <div class="sent-message">Your message has been sent. Thank you!</div>
             </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
+            <div class="text-center"><button type="submit" onclick="sendMessageToForm();">Send Message</button></div>
+            <script>
+              function sendMessageToForm(){
+                var this_form = $("form.php-email-form");
+                var request = new XMLHttpRequest();
+                addresstemplate = `https://docs.google.com/forms/d/e/1FAIpQLSdtFBz5oRJwfIrc24IrtOVpsma9OVI4d_fvul71P-b7DX0sTw/formResponse?entry.1322420812=${document.forms[2].name.value}&entry.2011052432=${document.forms[2].email.value}&entry.508923202=${document.forms[2].subject.value}&entry.413672615=${document.forms[2].message.value}&submit=Submit`
+                request.open('GET',addresstemplate);
+                request.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+                request.setRequestHeader("Access-Control-Allow-Origin","https://docs.google.com");
+                request.onreadystatechange = function(){
+                  if(request.readyState == 4){
+                    if(request.status === 200 || request.status === 0){
+                      this_form.find('.loading').slideUp();
+                      this_form.find('.sent-message').slideDown();
+                      this_form.find("input:not(input[type=submit]), textarea").val('');
+                    } else {
+                      this_form.find('.loading').slideUp();
+                      this_form.find('.error-message').slideDown().html("Form Submission Failed <br>");
+                    }
+                  }
+                }
+                request.send();
+              }
+            </script>
           </form>
         </div>
 
