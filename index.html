@@ -911,7 +911,7 @@
           <!--<h3 style="text-align:center;"></h3>-->
           <p>Purchase your tickets for the in-person event, or access the event virtually for a small donation. <br>The event will last until 10 PM. Optional honorary dress code is black tie.
             All revenue from ticket sales will be shared equally between the Dahl and Homer Foundations.
-            <a href="https://book.passkey.com/go/CaptJasonDahl">Book a hotel room here.</a></p>
+            <a href="https://book.passkey.com/go/CaptJasonDahl">Book a hotel room here.</a><br/>Due to the postponement, ticketing will not be available until further notice.</p>
         </div>
 
         <div class="row">
@@ -1177,6 +1177,20 @@
 
   <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
+  <div id="covidalert" style="position:fixed; left:15vw; top:15vh; width:70vw; height:70vh; background-color:black; border-radius:25px;padding:20px;">
+    <div style="position:relative; float:right; background-color:red;color:white; margin-right:-20px; margin-top:-20px; padding:8px;cursor:pointer;" onclick="$('#covidalert').hide();">Close</div>
+    <h1 style="font-weight:bold; color:aliceblue;">
+      The Captain Jason Dahl Scholarship Fund Board has made the difficult decision to postpone our Heroes of Flight 93 Remembrance Gala originally scheduled for October 2, 2021. 
+    </h1>
+    <p style="color:aliceblue;">
+      Our decision was made In the interest of public safety  due to  the uncertain and rising risks brought on by Covid-19 and the Delta Variant. 
+      <br/>
+      The last heroic acts of Captain Dahl, First Officer Homer and the crew and passengers of flight 93 were  in the unselfish interest of public safety and concern.  We think this unfortunate postponement is in keeping with their acts of heroism.
+      <br/>
+      Our event will be rescheduled at a time when the potential health threats are reduced.  Thank you for your understanding and support.
+    </p>
+  </div>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1190,6 +1204,12 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    function hidevoidalert(){
+      $("#covidalert").hide();
+    }
+  </script>
 
 </body>
 
